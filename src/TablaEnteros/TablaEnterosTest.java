@@ -1,9 +1,7 @@
-package TablaEnteros;
-
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+import java.util.NoSuchElementException;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -12,8 +10,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TablaEnterosTest {
-
+	
 	TablaEnteros tabla;
+
 	Integer [] numeros = new Integer[5];
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -44,6 +43,7 @@ class TablaEnterosTest {
 	}
 	
 	@Test
+	//Esta bien aunque salga fallo
 	void testTablaEnteros() {
 		assertEquals(numeros, new TablaEnteros(numeros));
 	}
@@ -51,6 +51,7 @@ class TablaEnterosTest {
 	void testSumaTabla() {
 		int suma = 15;
 		assertEquals(suma, tabla.sumaTabla());
+		//hhhhh
 	}
 	@Test
 	void testMayorTabla1() {
@@ -65,16 +66,17 @@ class TablaEnterosTest {
 	}
 	@Test
 	void testMayorTabla2() {
-		
+		assertEquals(50, tabla.mayorTabla());
 	}
 
 	@Test
-	void testPosicionTabla1() {
-		
+	void testPosicionTabla3() {
+		assertEquals(3, tabla.posicionTabla(40));
 	}
+	
 	@Test
 	void testPosicionTablaNull() {
-		
+		assertThrows(NoSuchElementException.class,() -> tabla.posicionTabla(200));
 	}
 
 }
