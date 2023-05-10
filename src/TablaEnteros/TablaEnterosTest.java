@@ -77,7 +77,7 @@
 		}
 		@Test
 		void testPosicionTablaNull() {
-			assertThrows(NoSuchElementException.class,() -> tabla.posicionTabla(20));
+			assertThrows(NoSuchElementException.class,() -> tabla.posicionTabla(10));
 		}
 	
 	}
