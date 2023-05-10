@@ -3,7 +3,7 @@ package TablaEnteros;
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.NoSuchElementException;
+
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
